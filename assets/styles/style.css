@@ -21,7 +21,7 @@
   color: white;
 }
 
-main{
+main {
   padding-right: 2vw;
   padding-bottom: 2vw;
   padding-left: 2vw;
@@ -29,17 +29,17 @@ main{
 }
 
 
-#mainDetails{
+#mainDetails {
   display: flex;
   justify-content: center;
   padding: 8vh;
 }
 
-main>form{
+main>form {
   padding-top: 2vh;
 }
 
-div>.btn-group{
+div>.btn-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -47,7 +47,7 @@ div>.btn-group{
   align-content: center;
   width: 100%;
   min-height: 5vh;
-  gap:.5vw;
+  gap: .5vw;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -58,33 +58,33 @@ div>.btn-group{
 }
 
 
-.card-footer{
+.card-footer {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  
+
 }
 
-.text-muted{
+.text-muted {
   padding: 4px 8px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: black;
   font-weight: bolder;
   transform: scale(101%);
 }
 
-table{
+table {
   margin-top: 4vh;
 }
 
-#carouselExampleFade{
+#carouselExampleFade {
   display: flex;
-justify-content: space-between;  
+  justify-content: space-between;
 }
 
-.arrowNav{
+.arrowNav {
   display: flex;
   justify-items: center;
   align-items: center;
@@ -95,24 +95,24 @@ justify-content: space-between;
 
 
 
-.nameNav{
-  font-size: 40px  !important;
+.nameNav {
+  font-size: 40px !important;
   color: white;
   text-decoration: none;
 }
 
-#carouselExampleFade{
+#carouselExampleFade {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div>.card-body{
+div>.card-body {
   background-color: #060047;
   color: white;
 }
 
-div>.card-img-top{
+div>.card-img-top {
   height: 300px;
 }
 
@@ -122,22 +122,23 @@ div>.card-img-top{
   gap: 30px;
 }
 
-#img-details{
+#img-details {
   height: 50%;
 }
 
-.titulo-tabla{
+.titulo-tabla {
   background-color: #d90368 !important;
   color: white !important;
-} 
+}
 
-.subtitulo-tabla{
+.subtitulo-tabla {
   background-color: #060047 !important;
   color: white !important;
 }
 
-div>#container{
-
+div>#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 4px;
-
 }

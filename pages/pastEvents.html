@@ -94,7 +94,7 @@
                 </div>
             </div>
 
-            <template v-for=" event of eventsFilteredPast ">
+            <template v-if=" eventsFilteredPast.length > 0 " v-for=" event of eventsFilteredPast ">
 
                 <div id="container" class="row row-cols-1 row-cols-md-2 g-3">
                     <div class="col">
@@ -115,11 +115,11 @@
 
             </template>
 
-
-
-            <div id="no-results" class="d-none d-flex justify-content-center">
-                <img class="event-not-found" src="../assets/img/event-not-found.png" alt="">
-            </div>
+            <template v-else>
+                <div  class="d-flex justify-content-center">
+                    <img class="event-not-found" src="../assets/img/event-not-found.png" alt="">
+                </div>
+            </template>
 
         </div>
     </main>
