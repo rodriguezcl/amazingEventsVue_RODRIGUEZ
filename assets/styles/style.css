@@ -135,3 +135,9 @@ div>.card-img-top{
   background-color: #060047 !important;
   color: white !important;
 }
+
+div>#container{
+
+  padding: 4px;
+
+}
