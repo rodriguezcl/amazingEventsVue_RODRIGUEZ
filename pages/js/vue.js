@@ -11,16 +11,23 @@ createApp({
             categoriesUpcoming: undefined,
             categoriesPast: undefined,
             eventsFiltered: [],
-            eventsFilteredUpcoming: undefined,
-            eventsFilteredPast: undefined,
+            eventsFilteredUpcoming: [],
+            eventsFilteredPast: [],
             valueSearch: '',
             checked: [],
+            event: undefined
         }
     },
     created() {
         fetch(apiURL)
             .then(res => res.json())
             .then(data => {
+                if (document.title.includes('Amazing Events | Details')) {
+                    let queryString = location.search;
+                    let params = new URLSearchParams(queryString);
+                    let eventID = params.get("id");
+                    this.event = data.events.find((element) => element._id == eventID);
+                }
                 this.events = data.events
                 this.eventsFiltered = this.events
                 this.categories = [...new Set(this.events.map(evento => evento.category))]
@@ -60,18 +67,18 @@ createApp({
         getData() {
             let apiURL = "../../assets/amazing.json";
             fetch(apiURL)
-              .then((res) => res.json())
-              .then((res) => {
-                let data = res;
-                const $container = document.getElementById("mainDetails");
-                const queryString = location.search;
-                const params = new URLSearchParams(queryString);
-                const beerID = params.get("id");
-                const detail = data.events.find((element) => element._id == beerID);
-                createDetails(detail, $container);
-              })
-              .catch((err) => console.log(err));
-          }
+                .then((res) => res.json())
+                .then((res) => {
+                    let data = res;
+                    const $container = document.getElementById("mainDetails");
+                    const queryString = location.search;
+                    const params = new URLSearchParams(queryString);
+                    const beerID = params.get("id");
+                    const detail = data.events.find((element) => element._id == beerID);
+                    createDetails(detail, $container);
+                })
+                .catch((err) => console.log(err));
+        }
 
     },
     computed: {
