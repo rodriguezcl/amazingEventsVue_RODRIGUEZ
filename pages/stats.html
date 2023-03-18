@@ -60,59 +60,61 @@
     </div>
 
     <main id="mainStats">
-        <table class="table table-borderless table-hover">
-            <thead>
-                <tr>
-                    <th class="titulo-tabla" colspan="3">Events Statics</th>
-                </tr>
-                <tr class="subtitulo-tabla">
-                    <th>Event with the highest percentage of attendance</th>
-                    <th>Event with the lowest percentage of attendance</th>
-                    <th>Event with larger capacity</th>
-                </tr>
-            </thead>
+        <div id="app">
+            <table class="table table-borderless table-hover">
+                <thead>
+                    <tr>
+                        <th class="titulo-tabla" colspan="3">Events Statics</th>
+                    </tr>
+                    <tr class="subtitulo-tabla">
+                        <th>Event with the highest percentage of attendance</th>
+                        <th>Event with the lowest percentage of attendance</th>
+                        <th>Event with larger capacity</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr class="table table-hover" id="tablaParte1">
+                <tbody>
+                    <tr class="table table-hover" id="tablaParte1">
 
-                </tr>
-            </tbody>
+                    </tr>
+                </tbody>
 
-            <thead>
-                <tr>
-                    <th class="titulo-tabla" colspan="3">Upcoming Events statistics by category</th>
-                </tr>
-                <tr class="subtitulo-tabla">
-                    <th>Categories</th>
-                    <th>Revenues</th>
-                    <th>Percentage of attendance</th>
-                </tr>
-            </thead>
-
-
-            <tbody id="tablaParte2">
-
-            </tbody>
-
-            <thead>
-                <tr>
-                    <th class="titulo-tabla" colspan="3">Past Events statistics by category</th>
-                </tr>
-
-                <tr class="subtitulo-tabla">
-                    <th>Categories</th>
-                    <th>Revenues</th>
-                    <th>Percentage of attendance</th>
-                </tr>
-
-            </thead>
-            <tbody id="tablaParte3">
-
-            </tbody>
+                <thead>
+                    <tr>
+                        <th class="titulo-tabla" colspan="3">Upcoming Events statistics by category</th>
+                    </tr>
+                    <tr class="subtitulo-tabla">
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of attendance</th>
+                    </tr>
+                </thead>
 
 
+                <tbody id="tablaParte2">
 
-        </table>
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th class="titulo-tabla" colspan="3">Past Events statistics by category</th>
+                    </tr>
+
+                    <tr class="subtitulo-tabla">
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of attendance</th>
+                    </tr>
+
+                </thead>
+                <tbody id="tablaParte3">
+
+                </tbody>
+
+
+
+            </table>
+        </div>
     </main>
 
     <footer class="text-center text-lg-start bg-light text-muted">
@@ -150,8 +152,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../pages/js/vue.js"></script>
     <script type="module" src="./js/stats.js"></script>
-    <script type="module" src="./js/funciones.js"></script>
 
 </body>
 

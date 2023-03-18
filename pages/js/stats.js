@@ -1,7 +1,17 @@
-import { createCategories } from './funciones.js';
-
 let data = []
 let categories = [];
+
+const createCategories = (array) => {
+    let categories = array.map(category => category.category)
+
+    categories = categories.reduce((acumulador, elemento) => {
+        if (!acumulador.includes(elemento)) {
+            acumulador.push(elemento);
+        }
+        return acumulador
+    }, [])
+    return categories
+}
 
 async function getData() {
     let apiURL = "../../assets/amazing.json"

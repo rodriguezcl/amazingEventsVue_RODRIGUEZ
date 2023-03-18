@@ -62,22 +62,6 @@ createApp({
             this.eventsFilteredPast = this.eventsPast.filter(evento => {
                 return (this.checked.includes(evento.category) || this.checked.length === 0) && evento.name.toLowerCase().includes(this.valueSearch.toLowerCase())
             })
-        },
-
-        getData() {
-            let apiURL = "../../assets/amazing.json";
-            fetch(apiURL)
-                .then((res) => res.json())
-                .then((res) => {
-                    let data = res;
-                    const $container = document.getElementById("mainDetails");
-                    const queryString = location.search;
-                    const params = new URLSearchParams(queryString);
-                    const beerID = params.get("id");
-                    const detail = data.events.find((element) => element._id == beerID);
-                    createDetails(detail, $container);
-                })
-                .catch((err) => console.log(err));
         }
 
     },
